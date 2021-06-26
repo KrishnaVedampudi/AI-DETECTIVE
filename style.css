@@ -1,0 +1,26 @@
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.heading
+{
+    top: 0;
+    text-align: center;
+}
+.name
+{
+    margin-top: 20px;
+
+}
+#name
+{
+    width:450px;    
+}
+canvas
+{
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px grey;
+    border: 5px solid white;    
+}
