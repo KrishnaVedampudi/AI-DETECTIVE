@@ -72,3 +72,24 @@ function draw()
     }
     } 
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if the browser supports getUserMedia
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        alert('getUserMedia is not supported in this environment');
+        return;
+    }
+
+    // Request access to the camera
+    navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function(stream) {
+        // User granted access to the camera
+        console.log('Camera access granted');
+        // You can do further processing here, such as displaying the camera stream
+    })
+    .catch(function(error) {
+        // User denied access to the camera or an error occurred
+        console.error('Camera access denied or error:', error);
+    });
+});
+
